@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="~/lib/htmx.min.js"></script>
+    <script src="~/lib/hyperscript.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HtmxStarter</title>
+    <link rel="stylesheet" href="~/css/output.css"></link>
+</head>
+<body>
+    @await RenderSectionAsync("Scripts", required: false)
+    @RenderBody()
+</body>
+</html>

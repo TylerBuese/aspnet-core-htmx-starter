@@ -1,0 +1,11 @@
+@using HtmxStarter.Models;
+@model List<HtmxStarter.Models.Todo>;
+
+@foreach (var todo in Model)
+{
+    <div class="bg-blue-300 flex">
+        <div class="p-4">@todo.Title</div>
+        <div class="p-4">@todo.Description</div>
+        <div hx-delete="/Todo?id=@todo.ID" hx-swap="innerHTML" hx-target=".Todos" class="p-4 rounded-full bg-red-500">-</div>
+    </div>
+}

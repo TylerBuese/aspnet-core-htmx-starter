@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "https://github.com/TylerBuese",
+    "classifications": [ "Common", "WebApp" ],
+    "identity": "Htmx.Web.Api",
+    "name": "Htmx Starter Template",
+    "shortName": "HtmxStarter",
+    "sourceName": "aspnet_core_htmx_todo",
+    "preferNameDirectory": true,
+    "symbols": {
+        
+    }
+    
+  }

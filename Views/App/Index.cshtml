@@ -1,0 +1,39 @@
+﻿@using HtmxStarter.Models;
+@model List<HtmxStarter.Models.Todo>
+
+@* <div class="p-4">
+<div id="target"></div>
+<button class="border-2 border-black rounded-md bg-black font-serif text-white " hx-get="test" hx-target="#target">Click
+Me</button>
+</div> *@
+
+<div class="w-screen h-screen justify-center flex mt-10">
+    <div class="w-96 h-96 rounded-md bg-blue-300 ">
+        <label class="items-center justify-center flex p-4">Todos</label>
+        <div class="w-full border-b-[1px] border-black"></div>
+        <div class="h-48 border-2 rounded-md overflow-y-auto">
+            <div class="text-center">
+                <span>My Todos</span>
+            </div>
+            <div class="Todos">
+                @Html.Partial("../Template/Todo", Model)
+            </div>
+        </div>
+        <div class="w-full h-fit p-4">
+            <div class="text-center">
+                <label>Add Todo</label>
+            </div>
+            <div>
+                <form hx-swap="innerHTML" hx-target=".Todos" hx-post="/Todo" class="flex">
+                    <label>Title</label>
+                    <input name="Title" class="rounded-md w-full pl-2 h-6" />
+                    <label>Description</label>
+                    <input name="Description" class="rounded-md w-full pl-2 h-6" />
+                    <div class="pl-2">
+                        <button class="rounded-md bg-green-400 hover:bg-green-500 p-2">+</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
